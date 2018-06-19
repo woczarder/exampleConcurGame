@@ -9,9 +9,8 @@ import java.awt.event.ActionListener;
 
 public class Display implements Runnable{
     private JFrame frame;
-    private Canvas canvas;
 
-    public static JLabel countLabel = new JLabel("SFDSF");
+    public static JLabel countLabel = new JLabel("Ping Pong Simulation");
     public static JTextArea history = new JTextArea(30, 30);
     public static JScrollPane jp = new JScrollPane(history);
     public static JButton stopButton = new JButton("IT'S TIME TO STOP");
@@ -38,22 +37,11 @@ public class Display implements Runnable{
                 new ImageIcon("res/textures/cursor.png").getImage(),
                 new Point(0,0),"custom cursor"));*/
 
-        canvas = new Canvas();
-        canvas.setPreferredSize(new Dimension(width, height));
-        canvas.setMaximumSize(new Dimension(width, height));
-        canvas.setMinimumSize(new Dimension(width, height));
-        canvas.setFocusable(false);
-
-        frame.add(canvas);
         //frame.pack();
     }
 
     public JFrame getFrame() {
         return frame;
-    }
-
-    public Canvas getCanvas(){
-        return canvas;
     }
 
     @Override
